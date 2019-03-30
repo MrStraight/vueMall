@@ -11,11 +11,10 @@ margin: 0;
 padding: 0;
 border: 0;
 outline: 0;
-font-size: 62.5%;
+font-size: 16px;
 vertical-align: baseline;
 background: transparent;
 }
-
 a {font-size:16px} 
 a:link {color: #000; text-decoration:none;} 
 a:active:{color: red; } //¼¤»î£ººìÉ« 
