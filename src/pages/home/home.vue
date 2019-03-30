@@ -1,14 +1,24 @@
 <template>
 	<div>
-		home
+		<home-header></home-header>
+		<search></search>
 	</div>
 </template>
 
 <script>
-	export default{
-		name:'Home'
+	import HomeHeader from './components/header'
+	import Search from '../search/search'
+export default {
+	name: 'Home',
+	components:{
+		HomeHeader,
+		Search
 	}
+}
 </script>
 
-<style>
+<style scoped="scoped">
+	.search{
+		font-size: 4.1rem;
+	}
 </style>

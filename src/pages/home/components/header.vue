@@ -1,15 +1,22 @@
 <template>
 	<div class="header">
-		search
+		header
 	</div>
 </template>
 
 <script>
 	export default{
-		name:'search'
+		data(){
+			return{
+				
+			}
+		}
 	}
 </script>
 
 <style scoped="scoped">
-	
+	.header{
+		background-color: red;
+		font-size: 1.6rem;
+	}
 </style>
