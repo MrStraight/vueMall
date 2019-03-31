@@ -51,12 +51,14 @@
 		font-size: 1.25rem;
 		font-weight: 700;
 		text-align: center;
-		padding: 1.2rem .2rem;
+		padding: .3rem .2rem 1.1rem .2rem;
 	}
 	.title span{
 		font-size: 1.125rem;
 	}
-	
+	.left{
+		padding-left: 0.35rem;
+	}
 	.left,.RightTop,.RightBottom{
 		position: relative;
 		
@@ -80,6 +82,9 @@
 	.InfoPrice{
 		color: #c81c28;
 		font-size: 0.8rem;
+	}
+	.right{
+		padding-left: 0.35rem;
 	}
 	.RightBottom{
 		margin-top: .32rem;

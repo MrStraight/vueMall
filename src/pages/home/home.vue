@@ -6,6 +6,7 @@
 			<home-icon></home-icon>
 			<home-shopping></home-shopping>
 			<home-new-product></home-new-product>
+			<set></set>
 	</div>
 </template>
 
@@ -16,6 +17,7 @@
 	import HomeIcon from './components/HomeIcon'
 	import HomeShopping from './components/HomeShopping'
 	import HomeNewProduct from './components/HomeNewProduct'
+	import Set from './components/set'
 export default {
 	name: 'Home',
 	components:{
@@ -24,7 +26,8 @@ export default {
 		HomeSwiper,
 		HomeIcon,
 		HomeShopping,
-		HomeNewProduct
+		HomeNewProduct,
+		Set
 	}
 }
 </script>
