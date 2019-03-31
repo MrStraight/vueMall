@@ -11,6 +11,8 @@ import './assets/font/iconfont.ttf'
 import './assets/font/iconfont.eot'
 import './assets/font/iconfont.css'
 
+import BScroll from 'better-scroll'/* 引入batter-scroll */
+
 import VueAwesomeSwiper from 'vue-awesome-swiper'/* 引入swiper-awesome */
 import './assets/css/swiper.css'
 
