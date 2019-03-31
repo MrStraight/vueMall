@@ -61,8 +61,6 @@
 				</div>
 			</div>
 		</div>
-	 
-	  
 	</div>
 </template>
 
@@ -111,7 +109,6 @@
 		display: inline-block;
 		overflow: hidden;
 		white-space: nowrap;
-
 		padding: 0 0.625rem;
 	}
 	.item{
