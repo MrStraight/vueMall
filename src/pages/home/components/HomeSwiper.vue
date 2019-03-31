@@ -18,13 +18,19 @@
     data() {
       return {
         swiperOption: {
+			pagination:'.swiper-pagination',
 			loop:true,
 			autoplay:3000,
-			pagination:'.swiper-pagination',
-        }
+			
+        },
+		swiperList:{
+			id:'001',
+			imgUrl:''
+		}
       }
     }
   }
+  
 </script>
 
 <style scoped="scoped">
