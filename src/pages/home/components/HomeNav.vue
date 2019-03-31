@@ -28,6 +28,8 @@
 		justify-content: space-around;
 	}
 	.HomeNav ul li{
+		white-space: nowrap;  
+		overflow: hidden;
 		font-size: 0.85rem;
 		color: #666;
 		padding: 0.2rem;
