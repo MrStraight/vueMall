@@ -12,7 +12,7 @@
 					</div>
 				</router-link>
 				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+					<div class="img"><img src="@/assets/imgs/shopping2.jpg"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+					<div class="img"><img src="@/assets/imgs/shopping3.jpg"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+					<div class="img"><img src="@/assets/imgs/shopping4.jpg"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+					<div class="img"><img src="@/assets/imgs/shopping5.jpg"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
@@ -44,7 +44,7 @@
 					</div>
 				</div>	
 				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+					<div class="img"><img src="@/assets/imgs/shopping6.jpg"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+					<div class="img"><img src="@/assets/imgs/shopping7.jpg"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>

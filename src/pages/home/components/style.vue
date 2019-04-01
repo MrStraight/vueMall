@@ -17,7 +17,7 @@
 
 <script>
 	export default{
-		name:"Style"
+		name:"HomeStyle"
 	}
 </script>
 
