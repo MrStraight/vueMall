@@ -92,7 +92,6 @@
 			</div>
 		</swiper>
 	</div> 
-
 </template>
 
 <script>
@@ -101,13 +100,9 @@
 		name:'set',
 		data(){
 			return{
-				showBorder1:true,
-				showBorder2:false,
-				showBorder3:false,
-				showBorder4:false,
+				list:["客厅","卧室","餐厅","书房"],
 				swiperOption:{
 					atuo:false,
-					loop:false,
 				}
 			}
 		},
@@ -117,13 +112,12 @@
 		  }
 		},
 		mounted() {
-				
+			
 		},
 		methods:{
 			change(){
 				var a = document.getElementsByTagName('li')
 				this.swiper.slideTo(0, 500, false);//切换到第一个slide，速度为0.5秒
-				
 			},
 			change2(){
 				this.swiper.slideTo(1, 1000, false);
