@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like1.jpg"></div>
+				<div class="img"><img src="@/assets/imgs/like2.jpg"></div>
 				<div class="info">
 					<p class="price">￥<span>2250</span></p>
 					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like1.jpg"></div>
+				<div class="img"><img src="@/assets/imgs/like3.jpg"></div>
 				<div class="info">
 					<p class="price">￥<span>2250</span></p>
 					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
@@ -27,7 +27,7 @@
 				</div>
 			</div>
 			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like1.jpg"></div>
+				<div class="img"><img src="@/assets/imgs/like4.jpg"></div>
 				<div class="info">
 					<p class="price">￥<span>2250</span></p>
 					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like1.jpg"></div>
+				<div class="img"><img src="@/assets/imgs/like5.jpg"></div>
 				<div class="info">
 					<p class="price">￥<span>2250</span></p>
 					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like1.jpg"></div>
+				<div class="img"><img src="@/assets/imgs/like6.jpg"></div>
 				<div class="info">
 					<p class="price">￥<span>2250</span></p>
 					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>

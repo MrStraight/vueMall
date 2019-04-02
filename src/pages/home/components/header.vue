@@ -1,9 +1,24 @@
 <template>
-	<div class="header">
-		<!-- <div class="logo"><img src="../../../assets/imgs/logo.png"></div> -->
-		<router-link class="logo" tag="a" to="/"><span></span></router-link>
-		<router-link class="input" tag="div" to="/search"><i class="iconfont icon-sousuo"></i>搜索商品</router-link>
-		<router-link class="city" tag="div" to="/city">石家庄<span class="iconfont icon-down"></span></router-link>
+	<div class="sss">
+		<div class="wrap">
+			<div class="header">
+				<!-- <div class="logo"><img src="../../../assets/imgs/logo.png"></div> -->
+				<router-link class="logo" tag="a" to="/"><span></span></router-link>
+				<router-link class="input" tag="div" to="/search"><i class="iconfont icon-sousuo"></i>搜索商品</router-link>
+				<router-link class="city" tag="div" to="/city">石家庄<span class="iconfont icon-down"></span></router-link>
+			</div>
+			<div class="HomeNav">
+				 <ul>
+					 <router-link tag="li" to="/" class="active">首页</router-link>
+					 <router-link tag="li" to="/new">新品</router-link>
+					<li>每日特卖</li>
+					<li>沙发床</li>
+					<li>床垫</li>
+					<li>实木家具</li>
+					<li>地板</li>
+				 </ul>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -11,18 +26,59 @@
 	export default{
 		data(){
 			return{
-				
 			}
-		}
+		},
+		methods:{
+			/* listenScroll(){
+				var top = document.documentElement.scrollTop;
+				var wrap = document.getElementsByClassName('wrap')[0];
+				console.log(top);
+				if(top>wrap.offsetTop){
+					console.log('asd')
+					wrap.classList.add('fiex')
+					//window.removeEventListener('scroll',this.listenScroll)
+				}else if(top < 4){
+					wrap.classList.remove('fiex')
+				}
+				
+			} */
+		},
+		mounted() {
+				//console.log(document.getElementsByClassName('wrap')[0].offsetTop)
+				// window.addEventListener('scroll',this.listenScroll)
+				if (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky")) {
+			// 支持 sticky
+			console.log('支持')
+}
+		},
+
 	}
 </script>
 
 <style scoped="scoped">
-	.header{
+	.fiex{
+		position: fixed;
+		top: 0;
+		z-index: 999;
 		background-color: #fff;
+		width: 100%;
+	}
+	.sss{
+		position: sticky;
+		top: 0;
+		z-index: 99999;
+	}
+	.wrap{
+		z-index: 999;
+		width: 100%; 
+		background-color: #fff;
+	}
+	.header{
+		
 		display: flex;
 		flex-wrap:nowrap;
 		padding: 0.4rem 0.7rem;
+		
 	}
 	.header .logo span{
 		display: inline-block;
@@ -47,5 +103,28 @@
 		height: 1.625rem;
 		line-height: 1.625rem;
 		white-space: nowrap;  
+	}
+	
+	
+	.HomeNav{
+		padding: 0.3125rem 0.2rem;
+		
+	}
+	.HomeNav ul{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+	.HomeNav ul li{
+		white-space: nowrap;  
+		overflow: hidden;
+		font-size: 0.85rem;
+		color: #666;
+		padding: 0.2rem;
+	}
+</style>
+<style>
+	.active{
+		border-bottom: 0.1rem solid #000;
 	}
 </style>

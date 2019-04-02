@@ -1,7 +1,6 @@
 <template>
 	<div class="HomeWrapper">
 			<home-header></home-header>
-			<home-nav></home-nav>
 			<home-swiper></home-swiper>
 			<home-icon></home-icon>
 			<home-shopping></home-shopping>
@@ -10,12 +9,12 @@
 			<home-style></home-style>
 			<home-hot></home-hot>
 			<guess-like></guess-like>
+			<home-footer></home-footer>
 	</div>
 </template>
 
 <script>
 	import HomeHeader from './components/header'
-	import HomeNav from './components/HomeNav'
 	import HomeSwiper from './components/HomeSwiper'
 	import HomeIcon from './components/HomeIcon'
 	import HomeShopping from './components/HomeShopping'
@@ -24,11 +23,11 @@
 	import HomeStyle from './components/style'
 	import HomeHot from './components/HomeHot'
 	import GuessLike from './components/GuessLike'
+	import HomeFooter from './components/footer'
 export default {
 	name: 'Home',
 	components:{
 		HomeHeader,
-		HomeNav,
 		HomeSwiper,
 		HomeIcon,
 		HomeShopping,
@@ -36,7 +35,8 @@ export default {
 		Set,
 		HomeStyle,
 		HomeHot,
-		GuessLike
+		GuessLike,
+		HomeFooter
 	}
 }
 </script>
