@@ -52,7 +52,6 @@ export default {
 	},
 	methods:{
 		getAxiosInfo(){
-			console.log("getAxiosInfo")
 			axios.get('/api/index.json').then(this.getAxiosInfoSucc)
 		},
 		getAxiosInfoSucc(res){
