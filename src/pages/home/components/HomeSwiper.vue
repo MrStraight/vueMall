@@ -1,20 +1,11 @@
 <template>
 	<div class="HomeSwiper">
-		<swiper :options="swiperOption">
+		<swiper :options="swiperOption" v-if="SwiperList.length">
 			<!-- slides -->
-			<swiper-slide>
-				<div class="img"><img src="../../../assets/imgs/banner2.jpg" /></div>
+			<swiper-slide v-for="item of SwiperList" :key="item.id">
+				<div class="img"><img :src="item.HomeSwiperImgsUrl" /></div>
 			</swiper-slide>
-			<swiper-slide>
-				<div class="img"><img src="../../../assets/imgs/banner1.jpg" /></div>
-			</swiper-slide>
-			<swiper-slide>
-				<div class="img"><img src="../../../assets/imgs/banner3.jpg" /></div>
-			</swiper-slide>
-			<swiper-slide>
-				<div class="img"><img src="../../../assets/imgs/banner4.jpg" /></div>
-			</swiper-slide>
-			<!-- Optional controls -->
+			
 			<div class="swiper-pagination" slot="pagination"></div>
 			
 		</swiper>
@@ -24,17 +15,30 @@
 <script>
 export default {
 	name: 'HomeSwiper',
+	props:{
+		SwiperList:Array
+	},
 	data() {
 		return {
+			/*HomeSwiperList:[{
+				id:'0001',
+				HomeSwiperImgsUrl:'http://lhvideo.xyz/vuescimgs/banner1.jpg'
+			},{
+				id:'0002',
+				HomeSwiperImgsUrl:'http://lhvideo.xyz/vuescimgs/banner2.jpg'
+			},{
+				id:'0003',
+				HomeSwiperImgsUrl:'http://lhvideo.xyz/vuescimgs/banner3.jpg'
+			},{
+				id:'0004',
+				HomeSwiperImgsUrl:'http://lhvideo.xyz/vuescimgs/banner4.jpg'
+			}],*/
 			swiperOption: {
 				pagination: '.swiper-pagination',
 				loop: true,
 				autoplay: 3000
 			},
-			swiperList: {
-				id: '001',
-				imgUrl: ''
-			}
+			
 		};
 	}
 };

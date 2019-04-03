@@ -5,7 +5,7 @@
 				<!-- <div class="logo"><img src="../../../assets/imgs/logo.png"></div> -->
 				<router-link class="logo" tag="a" to="/"><span></span></router-link>
 				<router-link class="input" tag="div" to="/search"><i class="iconfont icon-sousuo"></i>搜索商品</router-link>
-				<router-link class="city" tag="div" to="/city">石家庄<span class="iconfont icon-down"></span></router-link>
+				<router-link class="city" tag="div" to="/city">{{this.city}}<span class="iconfont icon-down"></span></router-link>
 			</div>
 			<div class="HomeNav">
 				 <ul>
@@ -24,34 +24,15 @@
 
 <script>
 	export default{
+		name:'HomeHeader',
+		props:{
+			city:String
+		},
 		data(){
 			return{
+				
 			}
 		},
-		methods:{
-			/* listenScroll(){
-				var top = document.documentElement.scrollTop;
-				var wrap = document.getElementsByClassName('wrap')[0];
-				console.log(top);
-				if(top>wrap.offsetTop){
-					console.log('asd')
-					wrap.classList.add('fiex')
-					//window.removeEventListener('scroll',this.listenScroll)
-				}else if(top < 4){
-					wrap.classList.remove('fiex')
-				}
-				
-			} */
-		},
-		mounted() {
-				//console.log(document.getElementsByClassName('wrap')[0].offsetTop)
-				// window.addEventListener('scroll',this.listenScroll)
-				if (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky")) {
-			// 支持 sticky
-			console.log('支持')
-}
-		},
-
 	}
 </script>
 

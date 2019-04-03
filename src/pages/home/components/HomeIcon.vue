@@ -1,14 +1,8 @@
 <template>
 	<div class="HomeIcon">
 		<ul>
-			<router-link tag="li" to="tyg"><div><img src="@/assets/imgs/icon1.jpg"></div><span>体验馆</span></router-link>
-			<router-link tag="li" to="phb"><div><img src="@/assets/imgs/icon2.jpg"></div><span>排行榜</span></router-link>
-			<router-link tag="li" to="mrtm"><div><img src="@/assets/imgs/icon3.jpg"></div><span>每日特卖</span></router-link>
-			<router-link tag="li" to="ym"><div><img src="@/assets/imgs/icon4.jpg"></div><span>阅木</span></router-link>
-			<router-link tag="li" to="smjj"><div><img src="@/assets/imgs/icon5.jpg"></div><span>实木家具</span></router-link>
-			<router-link tag="li" to="sf"><div><img src="@/assets/imgs/icon6.jpg"></div><span>沙发</span></router-link>
-			<router-link tag="li" to="c"><div><img src="@/assets/imgs/icon7.jpg"></div><span>床</span></router-link>
-			<router-link tag="li" to="cd"><div><img src="@/assets/imgs/icon8.jpg"></div><span>床垫</span></router-link>
+			<router-link tag="li"  v-for="item of IconsList" :key="item.id" :to="item.url"><div><img :src="item.HomeIconsUrl"></div><span>体验馆</span></router-link>
+			
 		</ul>
 	</div>
 </template>
@@ -16,9 +10,52 @@
 <script>
 	export default{
 		name:'HomeIcon',
+		props:{
+			IconsList:Array
+		},
 		data(){
 			return{
-				
+				/* HomeIconsList:[{
+					id:'0001',
+					url:'/tyg',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon1.jpg',
+					HomeIconsTitle:'体验馆'
+					},{
+					id:'0002',
+					url:'/phb',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon2.jpg',
+					HomeIconsTitle:'排行榜'
+					},{
+					id:'0003',
+					url:'/mrtm',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon3.jpg',
+					HomeIconsTitle:'每日特卖'
+					},{
+					id:'0004',
+					url:'/ym',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon4.jpg',
+					HomeIconsTitle:'阅木'
+					},{
+					id:'0005',
+					url:'/tyb',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon5.jpg',
+					HomeIconsTitle:'实木家具'
+					},{
+					id:'0006',
+					url:'/sf',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon6.jpg',
+					HomeIconsTitle:'沙发'
+					},{
+					id:'0007',
+					url:'/tyb',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon7.jpg',
+					HomeIconsTitle:'床'
+					},{
+					id:'0008',
+					url:'/cd',
+					HomeIconsUrl:'http://lhvideo.xyz/vuescimgs/icon8.jpg',
+					HomeIconsTitle:'床垫'
+					}] */
 				}
 			}
 		}

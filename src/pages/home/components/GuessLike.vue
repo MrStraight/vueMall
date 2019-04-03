@@ -2,52 +2,12 @@
 	<div class="hot">
 		<div class="title">猜你喜欢</div>
 		<div class="GuessLikeList">
-			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like1.jpg"></div>
+			<div class="GuessItem" v-for="item of GuessLikeList" :key="item.id">
+				<div class="img"><img :src="item.HomeGuessLikeImgsUrl"></div>
 				<div class="info">
-					<p class="price">￥<span>2250</span> <span class="tejia">特价</span></p>
-					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
-					<p class="sell">已售50207</p>
-				</div>
-			</div>
-			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like2.jpg"></div>
-				<div class="info">
-					<p class="price">￥<span>2250</span></p>
-					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
-					<p class="sell">已售50207</p>
-				</div>
-			</div>
-			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like3.jpg"></div>
-				<div class="info">
-					<p class="price">￥<span>2250</span></p>
-					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
-					<p class="sell">已售50207</p>
-				</div>
-			</div>
-			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like4.jpg"></div>
-				<div class="info">
-					<p class="price">￥<span>2250</span></p>
-					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
-					<p class="sell">已售50207</p>
-				</div>
-			</div>
-			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like5.jpg"></div>
-				<div class="info">
-					<p class="price">￥<span>2250</span></p>
-					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
-					<p class="sell">已售50207</p>
-				</div>
-			</div>
-			<div class="GuessItem">
-				<div class="img"><img src="@/assets/imgs/like6.jpg"></div>
-				<div class="info">
-					<p class="price">￥<span>2250</span></p>
-					<p class="text">人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床</p>
-					<p class="sell">已售50207</p>
+					<p class="price">￥<span>{{item.HomeGuessLikePrice}}</span> <span class="tejia">特价</span></p>
+					<p class="text">{{item.HomeGuessLikeInfo}}</p>
+					<p class="sell">{{item.HomeGuessLikeSell}}</p>
 				</div>
 			</div>
 		</div>
@@ -56,7 +16,75 @@
 
 <script>
 	export default{
-		name:"GuessLike"
+		name:"GuessLike",
+		props:{
+			GuessLikeList:Array
+		},
+		data(){
+			return{
+				/* HomeGuessLikeList:[{
+					id:'0001',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like1.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207',
+				},{
+					id:'0002',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like2.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0003',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like3.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0004',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like4.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0005',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like5.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0006',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like6.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0007',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like7.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0008',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like8.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'0009',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like9.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				},{
+					id:'00010',
+					HomeGuessLikeImgsUrl:'http://lhvideo.xyz/vuescimgs/like10.jpg',
+					HomeGuessLikeInfo:'人气爆款 栅栏式简约设计 臻选美国进口白杨木1.2米/1.5米/1.8米床',
+					HomeGuessLikePrice:'2250',
+					HomeGuessLikeSell:'已售50207'
+				}] */
+			}
+		}
 	}
 </script>
 

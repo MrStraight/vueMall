@@ -3,62 +3,14 @@
 		<div class="title">限时抢购 <span class="iconfont icon-xiayiye"></span></div>
 		<div class="wrapper">
 			<div class="content">
-				<router-link tag="div" to="/shopping" class="item">
-					<div class="img"><img src="@/assets/imgs/shopping1.jpg"></div>
+				<router-link v-for="item of ShoppingList" :key="item.id" tag="div" :to="item.url" class="item">
+					<div class="img"><img :src="item.HomeShoppingImgsUrl"></div>
 					<div class="itemInfo">
 						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
 						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
 						<p class="price">￥<span>8542</span></p>
 					</div>
 				</router-link>
-				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping2.jpg"></div>
-					<div class="itemInfo">
-						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
-						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
-						<p class="price">￥<span>8542</span></p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping3.jpg"></div>
-					<div class="itemInfo">
-						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
-						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
-						<p class="price">￥<span>8542</span></p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping4.jpg"></div>
-					<div class="itemInfo">
-						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
-						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
-						<p class="price">￥<span>8542</span></p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping5.jpg"></div>
-					<div class="itemInfo">
-						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
-						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
-						<p class="price">￥<span>8542</span></p>
-					</div>
-				</div>	
-				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping6.jpg"></div>
-					<div class="itemInfo">
-						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
-						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
-						<p class="price">￥<span>8542</span></p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="img"><img src="@/assets/imgs/shopping7.jpg"></div>
-					<div class="itemInfo">
-						<p class="time"><span class="iconfont icon--lishi"></span>仅剩0天X小时</p>
-						<p class="info">古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜</p>
-						<p class="price">￥<span>8542</span></p>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -69,6 +21,9 @@
 
 	export default{
 		name:'HomeShopping',
+		props:{
+			ShoppingList:Array
+		},
 		mounted() {
 			let wrapper = document.querySelector('.wrapper')
 			let scroll = new BScroll(wrapper,{
@@ -78,7 +33,42 @@
 		},
 		data(){
 			return{
-				
+				HomeShoppingList:[{
+					id:'0001',
+					url:"/shopping1",
+					HomeShoppingImgsUrl:'http://lhvideo.xyz/vuescimgs/shopping1.jpg',
+					HomeShoppingTime:'仅剩0天X小时',
+					HomeShoppingInfo:'古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜',
+					HomeShoppingPrice:'8542'
+				},{
+					id:'0002',
+					url:"/shopping1",
+					HomeShoppingImgsUrl:'http://lhvideo.xyz/vuescimgs/shopping1.jpg',
+					HomeShoppingTime:'仅剩0天X小时',
+					HomeShoppingInfo:'古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜',
+					HomeShoppingPrice:'8542'
+				},{
+					id:'0003',
+					url:"/shopping",
+					HomeShoppingImgsUrl:'http://lhvideo.xyz/vuescimgs/shopping1.jpg',
+					HomeShoppingTime:'仅剩0天X小时',
+					HomeShoppingInfo:'古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜',
+					HomeShoppingPrice:'8542'
+				},{
+					id:'0004',
+					url:"/shopping",
+					HomeShoppingImgsUrl:'http://lhvideo.xyz/vuescimgs/shopping1.jpg',
+					HomeShoppingTime:'仅剩0天X小时',
+					HomeShoppingInfo:'古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜',
+					HomeShoppingPrice:'8542'
+				},{
+					id:'0005',
+					url:"/shopping",
+					HomeShoppingImgsUrl:'http://lhvideo.xyz/vuescimgs/shopping1.jpg',
+					HomeShoppingTime:'仅剩0天X小时',
+					HomeShoppingInfo:'古铜色奢华雕花浴室柜 进口橡木实木浴室柜 爵士白天然大理石台面 1.4米长浴室柜',
+					HomeShoppingPrice:'8542'
+				}]
 			}
 		}
 	}

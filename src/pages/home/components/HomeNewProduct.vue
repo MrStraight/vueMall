@@ -33,7 +33,27 @@
 
 <script>
 	export default{
-		name:'HomeNewProduct'
+		name:'HomeNewProduct',
+		data(){
+			return{
+// 				HomeNewProductList:[{
+// 					id:'0001',
+// 					HomeNewProductImgs:'http://lhvideo.xyz/vuescimgs/NewProduct1.jpg',
+// 					HomeNewProductInfo:'可拉伸实木餐厅套装',
+// 					HomeNewProductPrice:'6099'
+// 				},{
+// 					id:'0002',
+// 					HomeNewProductImgs:'http://lhvideo.xyz/vuescimgs/NewProduct2.jpg',
+// 					HomeNewProductInfo:'1.8米实木双人床',
+// 					HomeNewProductPrice:'3099'
+// 				},{
+// 					id:'0003',
+// 					HomeNewProductImgs:'http://lhvideo.xyz/vuescimgs/NewProduct3.jpg',
+// 					HomeNewProductInfo:'精选黄牛皮转角沙发',
+// 					HomeNewProductPrice:'8999'
+// 				}]
+			}
+		}
 	}
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 	<div class="set">
-		<div class="title">新品首发 <span class="iconfont icon-xiayiye"></span></div>
+		<div class="title">全套屋系 <span class="iconfont icon-xiayiye"></span></div>
 		<ul class="title2">
 			<li @click="change">客厅</li>
 			<li @click="change2">卧室</li>
@@ -8,83 +8,23 @@
 			<li @click="change4">书房</li>
 		</ul>
 		<swiper class="swiper-wrapper" ref="mySwiper" :options="swiperOption">
-			<swiper-slide class="swiper-container">
-				<div class="img"><img src="@/assets/imgs/set1.jpg"></div>
+			<swiper-slide class="swiper-container" v-for="item of SetList" :key="item.id">
+				<div class="img"><img :src="item.SetImgs"></div>
 				<ul class="smallImg">
 					<li>
-						<img src="@/assets/imgs/set1-1.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
+						<img :src="item.SetImgs1">
+						<p class="info">{{item.SetInfo1}}</p>
+						<p class="price">￥<span>{{item.SetPrice1}}</span></p>
 					</li>
 					<li>
-						<img src="@/assets/imgs/set1-2.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
+						<img :src="item.SetImgs2">
+						<p class="info">{{item.SetInfo2}}</p>
+						<p class="price">￥<span>{{item.SetPrice2}}</span></p>
 					</li>
 					<li>
-						<img src="@/assets/imgs/set1-3.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-				</ul>
-			</swiper-slide>
-			<swiper-slide class="swiper-container">
-				<div class="img"><img src="@/assets/imgs/set2.jpg"></div>
-				<ul class="smallImg">
-					<li>
-						<img src="@/assets/imgs/set2-1.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-					<li>
-						<img src="@/assets/imgs/set2-2.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-					<li>
-						<img src="@/assets/imgs/set2-3.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-				</ul>
-			</swiper-slide>
-			<swiper-slide class="swiper-container">
-				<div class="img"><img src="@/assets/imgs/set3.jpg"></div>
-				<ul class="smallImg">
-					<li>
-						<img src="@/assets/imgs/set3-1.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-					<li>
-						<img src="@/assets/imgs/set3-2.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-					<li>
-						<img src="@/assets/imgs/set3-3.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-				</ul>
-			</swiper-slide>
-			<swiper-slide class="swiper-container">
-				<div class="img"><img src="@/assets/imgs/set4.jpg"></div>
-				<ul class="smallImg">
-					<li>
-						<img src="@/assets/imgs/set4-1.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-					<li>
-						<img src="@/assets/imgs/set4-2.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
-					</li>
-					<li>
-						<img src="@/assets/imgs/set4-3.jpg">
-						<p class="info">白椿木框架沙发</p>
-						<p class="price">￥<span>9998</span></p>
+						<img :src="item.SetImgs3">
+						<p class="info">{{item.SetInfo3}}</p>
+						<p class="price">￥<span>{{item.SetPrice3}}</span></p>
 					</li>
 				</ul>
 			</swiper-slide>
@@ -98,9 +38,60 @@
 	
 	export default{
 		name:'set',
+		props:{
+			SetList:Array
+		},
 		data(){
 			return{
-				list:["客厅","卧室","餐厅","书房"],
+				/* SetList:[{
+					id:'0001',
+					SetImgs:'http://lhvideo.xyz/vuescimgs/set1.jpg',
+					SetImgs1:'http://lhvideo.xyz/vuescimgs/set1-1.jpg',
+					SetImgs2:'http://lhvideo.xyz/vuescimgs/set1-2.jpg',
+					SetImgs3:'http://lhvideo.xyz/vuescimgs/set1-3.jpg',
+					SetInfo1:'白椿木框架沙发',
+					SetInfo2:'开放式储物茶几',
+					SetInfo3:'实木电视柜',
+					SetPrice1:'9998',
+					SetPrice2:'6899',
+					SetPrice3:'3022'
+				},{
+					id:'0002',
+					SetImgs:'http://lhvideo.xyz/vuescimgs/set2.jpg',
+					SetImgs1:'http://lhvideo.xyz/vuescimgs/set2-1.jpg',
+					SetImgs2:'http://lhvideo.xyz/vuescimgs/set2-2.jpg',
+					SetImgs3:'http://lhvideo.xyz/vuescimgs/set2-3.jpg',
+					SetInfo1:'白椿木框架沙发',
+					SetInfo2:'开放式储物茶几',
+					SetInfo3:'实木电视柜',
+					SetPrice1:'9998',
+					SetPrice2:'6899',
+					SetPrice3:'3022'
+				},{
+					id:'0003',
+					SetImgs:'http://lhvideo.xyz/vuescimgs/set3.jpg',
+					SetImgs1:'http://lhvideo.xyz/vuescimgs/set3-1.jpg',
+					SetImgs2:'http://lhvideo.xyz/vuescimgs/set3-2.jpg',
+					SetImgs3:'http://lhvideo.xyz/vuescimgs/set3-3.jpg',
+					SetInfo1:'白椿木框架沙发',
+					SetInfo2:'开放式储物茶几',
+					SetInfo3:'实木电视柜',
+					SetPrice1:'9998',
+					SetPrice2:'6899',
+					SetPrice3:'3022'
+				},{
+					id:'0004',
+					SetImgs:'http://lhvideo.xyz/vuescimgs/set4.jpg',
+					SetImgs1:'http://lhvideo.xyz/vuescimgs/set4-1.jpg',
+					SetImgs2:'http://lhvideo.xyz/vuescimgs/set4-2.jpg',
+					SetImgs3:'http://lhvideo.xyz/vuescimgs/set4-3.jpg',
+					SetInfo1:'白椿木框架沙发',
+					SetInfo2:'开放式储物茶几',
+					SetInfo3:'实木电视柜',
+					SetPrice1:'9998',
+					SetPrice2:'6899',
+					SetPrice3:'3022'
+				}], */
 				swiperOption:{
 					atuo:false,
 				}
