@@ -1,9 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
+let DefaultCity = '石家庄'
+try{								//兼容性
+	if(localStorage.city){
+		DefaultCity = localStorage.city
+	}
+}catch(e){}
 export default new Vuex.Store({
 	state:{
-		city:'石家庄'
+		city:DefaultCity
 	},
 /* 	actions:{
 		ChangeCity(ctx,e){
@@ -12,7 +18,10 @@ export default new Vuex.Store({
 	}, */
 	mutations:{
 		ChangeCity(state,e){
-			this.state.city = e
+			state.city = e
+			try{				//兼容性
+				localStorage.city = e
+			}catch(e){}
 		}
 	}
 })

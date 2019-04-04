@@ -26,11 +26,13 @@
 	import HomeFooter from './components/footer'
 	
 	import axios from 'axios'
+	import {mapState} from 'vuex'
 export default {
 	name: 'Home',
 	data(){
 		return{
 			city:'',
+			LastCity:'',
 			HomeSwiperList:[],
 			HomeIconsList:[],
 			HomeShoppingList:[],
@@ -50,9 +52,20 @@ export default {
 		GuessLike,
 		HomeFooter
 	},
+	activated() {
+		if(this.LastCity !== this.StoreCity){		
+			this.LastCity = this.StoreCity
+			this.getAxiosInfo()
+		}
+	},
+	computed:{
+		...mapState({
+			StoreCity:'city'
+		})	
+	},
 	methods:{
 		getAxiosInfo(){
-			axios.get('./api/index.json').then(this.getAxiosInfoSucc)
+			axios.get('./api/index.json?city=' + this.StoreCity).then(this.getAxiosInfoSucc)
 		},
 		getAxiosInfoSucc(res){
 			let AxiosData = res.data.data
@@ -67,6 +80,7 @@ export default {
 		}
 	},
 	mounted() {
+		this.LastCity = this.StoreCity
 		this.getAxiosInfo()
 	}
 }

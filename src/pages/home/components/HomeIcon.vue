@@ -1,7 +1,7 @@
 <template>
 	<div class="HomeIcon">
 		<ul>
-			<router-link tag="li"  v-for="item of IconsList" :key="item.id" :to="item.url"><div><img :src="item.HomeIconsUrl"></div><span>体验馆</span></router-link>
+			<router-link tag="li"  v-for="item of IconsList" :key="item.id" :to="item.url"><div><img :src="item.HomeIconsUrl"></div><span>{{item.HomeIconsTitle}}</span></router-link>
 			
 		</ul>
 	</div>

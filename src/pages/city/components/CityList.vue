@@ -4,7 +4,7 @@
 			当前城市
 		</div>
 		<div class="NowCity">
-			{{$store.state.city}}
+			{{this.StateCity}}
 		</div>
 		<div class="CityTitle">
 			热门城市
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+	import {mapState} from 'vuex'
 	export default{
 		name:'CityList',
 		data(){
@@ -56,6 +57,11 @@
 		props:{
 			HotCities:Array,
 			Cities:Object
+		},
+		computed:{
+			...mapState({
+				StateCity:'city'
+			})
 		},
 		mounted() {
 			addEventListener('scroll',this.ListenTop)
@@ -84,8 +90,6 @@
 				(function jump(){
 				if(distance > 0){
 				distance-=step;
-				// document.documentElement.scrollTop = distance;
-				// document.body.scrollTop = distance;
 				window.scrollTo(0,distance);
 				setTimeout(jump,5)
 				}
