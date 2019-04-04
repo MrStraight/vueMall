@@ -5,7 +5,7 @@
 				<!-- <div class="logo"><img src="../../../assets/imgs/logo.png"></div> -->
 				<router-link class="logo" tag="a" to="/"><span></span></router-link>
 				<router-link class="input" tag="div" to="/search"><i class="iconfont icon-sousuo"></i>搜索商品</router-link>
-				<router-link class="city" tag="div" to="/city">{{this.city}}<span class="iconfont icon-down"></span></router-link>
+				<router-link class="city" tag="div" to="/city">{{$store.state.city}}<span class="iconfont icon-down"></span></router-link>
 			</div>
 			<div class="HomeNav">
 				 <ul>

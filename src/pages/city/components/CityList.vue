@@ -4,7 +4,7 @@
 			当前城市
 		</div>
 		<div class="NowCity">
-			石家庄
+			{{$store.state.city}}
 		</div>
 		<div class="CityTitle">
 			热门城市
@@ -12,7 +12,7 @@
 		<div class="HotCity">		<!-- 热门城市最外层 -->
 			<ul class="HotCityUl">
 				<li>全国</li>
-				<li v-for="item of HotCities" :key="item.id">{{item.name}}</li>
+				<li v-for="item of HotCities" :key="item.id" @click="ChangeCity(item.name)">{{item.name}}</li>
 			</ul>
 		</div>
 		<div class="MoreCity">
@@ -33,7 +33,7 @@
 		<div class="CityItem" v-for="(item,key) of Cities" :key="item.key" :ref="key">
 			<div class="CityTitle" id="a">{{key}} (以{{key}}为开头的城市名)</div>
 			<ul class="HotCityUl">
-				<li v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</li>
+				<li v-for="innerItem of item" :key="innerItem.id" @click="ChangeCity(innerItem.name)">{{innerItem.name}}</li>
 			</ul>
 		</div>
 		<!-- 回到顶部 -->
@@ -61,7 +61,10 @@
 			addEventListener('scroll',this.ListenTop)
 		},
 		methods:{
-			
+			ChangeCity(e){
+				this.$router.push('/')
+				this.$store.commit('ChangeCity',e)
+			},
 			ListenTop(){	//判断距离顶部250就显示bancktop按钮
 				if(window.pageYOffset > 250 || document.documentElement.scrollTop > 250){
 					this.ShowBackTop = true

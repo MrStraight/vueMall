@@ -12,7 +12,7 @@ import './assets/font/iconfont.eot'
 import './assets/font/iconfont.css'
 
 import BScroll from 'better-scroll'/* 引入batter-scroll */
-
+import store from './store'  		/* 引入Vuex */
 import VueAwesomeSwiper from 'vue-awesome-swiper'/* 引入swiper-awesome */
 import './assets/css/swiper.css'
 
@@ -25,6 +25,7 @@ Vue.use(VueAwesomeSwiper)					/* 使用swiper-awesome */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
